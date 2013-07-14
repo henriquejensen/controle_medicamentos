@@ -1,0 +1,110 @@
+@font-face {
+    font-family: "Futura";
+    src: url('../FUTURAL.TTF');
+}
+
+body {
+    background: url('../images/conteiner-bg.png');
+    font-family: Futura;
+    margin:0px;
+    //overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+header, footer {
+    background: url('../images/header-footer-bg.png');
+    width:100%;
+    height:100px;
+    position:absolute;
+    left:0px;
+    text-align:left;
+    line-height: 70px;
+}
+
+header {
+    top:0px;
+}
+
+header span{
+    position:absolute;
+    left:38%;
+    top:20px;
+    background: url('../images/logo.png') no-repeat;
+    background-size:80%;
+    float:left;
+    width:213px;
+    height:69px;
+}
+
+.conteiner span.bolinhas{
+    position:absolute;
+    left:-15%;
+    top:-120px;
+    background: url('../images/bolinhas.png') no-repeat;
+    background-size: 70%;
+    float:left;
+    width:626px;
+    height:450px;
+}
+
+footer {
+    bottom:0px;
+}
+
+.conteiner {
+    position:absolute;
+    left:0px;
+    top:150px;
+    width:52%;
+    height:100%;
+    z-index:1;
+    margin-left:24%;
+    margin-right:24%;
+}
+
+#signin { 
+    width:300px;
+    height:100%;
+    position:absolute;
+    right:0px;
+    text-align:center;
+}
+
+#signin span {
+    font-size:18px;
+    color: #00455b;
+}
+
+#signin table { width:100%; }
+
+#signin table tr:last-child td {
+    position:absolute;
+    right:0px;
+}
+
+#icons {
+    position:absolute;
+    top:260px;
+    background: url('../images/icon-bar.png') no-repeat;
+    background-size:100%;
+    width:100%;
+    height:200px;
+}
+
+footer .grupython {
+    background: url('../images/grupython.png') no-repeat;
+}
+
+#footer-links {
+    list-style:none;
+}
+
+#footer-links li {
+    display:inline;
+    padding-right:40px;
+}
+
+#footer-links li a {
+    color:white;
+    text-decoration:none;
+}
