@@ -139,7 +139,7 @@ Pacientes.nome.requires = IS_NOT_EMPTY()
 Pacientes.altura.requires = [IS_NOT_EMPTY(), IS_LENGTH(minsize=1)]
 Pacientes.peso.requires = [IS_NOT_EMPTY(), IS_LENGTH(minsize=1)]
 Pacientes.data_nascimento.requires = [IS_NOT_EMPTY(), IS_DATE(
-    format=('%d-%m-%Y'), error_message='Data inválida')]
+    format=('%d/%m/%Y'), error_message='Data inválida, entre com a data conforme exemplo: DD/MM/AAAA')]
 
 Medicamentos = db.define_table('medicamentos',
                                Field('farmaco', label='Fármaco'),
@@ -204,8 +204,11 @@ PacienteMedicamento = db.define_table('paciente_medicamento',
                                       'id_paciente', 'reference pacientes'),
                                       Field(
                                       'id_medicamento', 'reference medicamentos'),
-                                      Field('horarios', 'time'),
+                                      Field('horario', 'time'),
                                       Field('posologia'))
+
+
+
 
 PacienteMedicamento.id_paciente.requires = IS_IN_DB(
     db, 'pacientes.id', '%(nome)s')
